@@ -8,9 +8,6 @@
     <!--<meta name="keywords" content="${content.keywords!""}"/>-->
     <!--<meta name="description" content="${content.description!""}"/>-->
     <meta name="author" content="">
-
-    <title>${title}</title>
-
     [#--bootstrap css--]
     <link rel="stylesheet" href="${ctx.contextPath}/.resources/one-pager-module/webresources/bootstrap-3.3.5/bootstrap.min.css ">
     <link rel="stylesheet" href="${ctx.contextPath}/.resources/one-pager-module/webresources/bootstrap-3.3.5/bootstrap-theme.min.css ">
@@ -25,26 +22,6 @@
     [@cms.page /]
 </head>
 <body>
-[#--top navigation--]
-<!--<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">-->
-    <!--<div class="container topnav">-->
-        <!--<div class="navbar-header">-->
-            <!--<button type="button" class="navbar-toggle" data-toggle="collapse"-->
-                    <!--data-target="#bs-example-navbar-collapse-1">-->
-                <!--<span class="sr-only">Toggle navigation</span>-->
-                <!--<span class="icon-bar"></span>-->
-                <!--<span class="icon-bar"></span>-->
-                <!--<span class="icon-bar"></span>-->
-            <!--</button>-->
-            <!--<a class="navbar-brand topnav" href="#intro">Home</a>-->
-        <!--</div>-->
-        <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
-            <!--[#&#45;&#45;dynamic part of top-nav&#45;&#45;]-->
-            <!---->
-        <!--</div>-->
-    <!--</div>-->
-<!--</nav>-->
-[#--eof: top navigation--]
 
 <!--<div class="intro-section" id="intro">-->
     <!--<div class="container">-->
@@ -52,16 +29,15 @@
             <!--<div class="col-lg-12">-->
                 <!--<div class="intro-message">-->
                     <!--<h1 class="dark">${title}</h1>-->
-                    <!--[#if content.subTitle?has_content]-->
-                    <!--<h3>${content.subTitle}</h3>-->
-                    <!--[/#if]-->
                     <!--<hr class="intro-divider">-->
                 <!--</div>-->
             <!--</div>-->
         <!--</div>-->
     <!--</div>-->
 <!--</div>-->
-[#--eof: intro-section--]
+<!--[#&#45;&#45;eof: intro-section&#45;&#45;]-->
+[@cms.area name="navigation"/]
+
 
 [@cms.area name="content-sections"/]
 
