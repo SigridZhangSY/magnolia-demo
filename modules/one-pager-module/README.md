@@ -1,4 +1,4 @@
-# demo
+# one-pager-module
 
 <!--
 Provide a one sentence description of what your light module

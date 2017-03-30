@@ -1,0 +1,13 @@
+imaging:
+  class: info.magnolia.templating.imaging.VariationAwareImagingSupport
+  variations:
+    large:
+      class: info.magnolia.templating.imaging.variation.SimpleResizeVariation
+      width: 730
+    large-square:
+      class: info.magnolia.templating.imaging.variation.SimpleResizeVariation
+      width: 730
+      height: 730
+    xxlarge:
+      class: info.magnolia.templating.imaging.variation.SimpleResizeVariation
+      width: 1140
