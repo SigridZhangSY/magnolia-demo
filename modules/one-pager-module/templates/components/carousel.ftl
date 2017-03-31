@@ -7,6 +7,7 @@
 
 [#-------------- RENDERING --------------]
 
+<!-- Tour Carousel -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
     <!-- Indicators -->
@@ -30,40 +31,34 @@
 
 
         [#assign rendition = damfn.getRendition(product, "xxlarge")!]
-    <div class="item ${activeClass}">
-        <div class="item ${activeClass}"${backgroundImage(rendition)}>
+        <div class="item ${activeClass}">
             <div class="container">
                 <a class="carousel-link" ">
-                <div class="carousel-caption">
-                    <img src="${rendition.link}">
+                    <div class="carousel-caption">
+                        <img src="${rendition.link}">
 
-                    <h1>${product.name!}</h1>
-                    [#if showTourTypes]
-                        <div class="category-icons">
-                            [#list tour.tourTypes as tourType]
-                                <div class="category-icon absolute-center-container">
-                                    [@tourTypeIcon tourType.icon tourType.name "" /]
-                                </div>
-                            [/#list]
-                        </div>
-                    [/#if]
-                    <button class="btn btn-lg btn-primary">${i18n['product.view']}</button>
-                </div>
+                        [#--<h1>${product.name!}</h1>--]
+                        [#--[#if showTourTypes]--]
+                            [#--<div class="category-icons">--]
+                                [#--[#list tour.tourTypes as tourType]--]
+                                    [#--<div class="category-icon absolute-center-container">--]
+                                        [#--[@tourTypeIcon tourType.icon tourType.name "" /]--]
+                                    [#--</div>--]
+                                [#--[/#list]--]
+                            [#--</div>--]
+                        [#--[/#if]--]
+                    </div>
                 </a>
             </div>
         </div>
     [/#list]
     </div>
 
-        <!-- Carousel Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">${i18n['product.previous']}</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">${i18n['product.next']}</span>
-        </a>
-    </div>
+    <!-- Carousel Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon icon-prev" aria-hidden="true"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon icon-next" aria-hidden="true"></span>
+    </a>
 </div>
-

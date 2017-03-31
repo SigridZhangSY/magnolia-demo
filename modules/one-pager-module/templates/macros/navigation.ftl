@@ -2,7 +2,7 @@
 [#macro navigation navParentItem depth=1 expandAll=false navClass="nav"]
     <div class="nav-logoitem">
         <a href="${navfn.link(navParentItem)!"#"}">
-            <img src="http://shopfs.myoppo.com/cn/media/images/logo.svg">
+            <img src="../../webresources/images/logo.svg">
         </a>
     </div>
 
