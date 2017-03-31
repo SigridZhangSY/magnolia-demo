@@ -1,0 +1,35 @@
+.navbar-nav {
+    float: right;
+    margin: 15px;
+}
+
+.nav-item span{
+    color: #7b7b7b;
+    padding: 4px 2px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.nav-item span:hover{
+    color: black;
+}
+
+.nav-item {
+    float: right;
+}
+
+.active.nav-item span {
+    color: red;
+    border-bottom: 2px solid #2aad6f;
+}
+
+.nav-logoitem {
+    width: 400px;
+    position: relative;
+    float: left;
+    margin: 20px 10px 20px 20px;
+}
+
+.nav-logoitem img {
+    height: 19px;
+}

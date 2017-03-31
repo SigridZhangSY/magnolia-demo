@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="${ctx.contextPath}/.resources/one-pager-module/webresources/bootstrap-3.3.5/bootstrap-theme.min.css ">
     [#--Custom CSS--]
     <link rel="stylesheet" href="${ctx.contextPath}/.resources/one-pager-module/webresources/css/one-pager.css?z=123">
+    <link rel="stylesheet" href="${ctx.contextPath}/.resources/one-pager-module/webresources/css/navigation.css?z=123">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     [#--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries--]
     <!--[if lt IE 9]>
