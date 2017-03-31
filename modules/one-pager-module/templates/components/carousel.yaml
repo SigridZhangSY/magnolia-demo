@@ -1,0 +1,4 @@
+templateScript: /one-pager-module/templates/components/carousel.ftl
+dialog: one-pager-module:components/carousel
+#modelClass: info.magnolia.demo.travel.tours.model.CarouselModel
+renderType: freemarker

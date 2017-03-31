@@ -1,0 +1,27 @@
+form:
+  tabs:
+    - name: tabMain
+      fields:
+        - name: products
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          buttonSelectAddLabel: field.link.select.add
+          field:
+            class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+            targetWorkspace: dam
+            appName: assets
+            label: Select image
+            identifierToPathConverter:
+              class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+            contentPreviewDefinition:
+              contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+            fieldEditable: false
+            buttonSelectNewLabel: field.link.select.new
+            buttonSelectOtherLabel: field.link.select.another
+
+
+#        - name: showTourTypes
+#          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
+#          defaultValue: true
+#          type: Boolean
+
+actions: !include /one-pager-module/dialogs/common/default-dialog-actions.yaml
