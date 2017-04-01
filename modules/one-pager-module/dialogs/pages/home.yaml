@@ -1,9 +1,33 @@
 form:
   tabs:
-    - name: tabText
-      label: Title texts
+    - name: tabMain
       fields:
         - name: title
+          lable: title
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          label: Title
+          i18n: true
+        - name: navigationTitle
+          lable: navigationTitle
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true
+        - name: windowTitle
+          lable: windowTitle
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true
+        - name: hideInNav
+          lable: hideInNav
+          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
+          defaultValue: false
+          i18n: false
+          type: Boolean
+        - name: logo
+           label: select image
+           class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+           targetWorkspace: dam
+           appName: assets
+           identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+           contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+
 actions: !include /one-pager-module/dialogs/common/default-dialog-actions.yaml

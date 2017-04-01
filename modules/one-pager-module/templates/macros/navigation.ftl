@@ -1,10 +1,14 @@
 [#-- Basic navigation macro which generates simple navigation. You can adjust it to fulfil your needs. --]
-[#macro navigation navParentItem depth=1 expandAll=false navClass="nav"]
+[#macro navigation navParentItem logo depth=1 expandAll=false navClass="nav"]
+    [#if logo?has_content]
+
+        [#assign rendition = damfn.getRendition(logo, "")!]
     <div class="nav-logoitem">
         <a href="${navfn.link(navParentItem)!"#"}">
-            <img src="../../webresources/images/logo.svg">
+            <img src="${rendition.link}">
         </a>
     </div>
+    [/#if]
 
 
     [#if navParentItem?has_content && depth > 0]

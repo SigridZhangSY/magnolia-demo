@@ -17,31 +17,14 @@ form:
           defaultValue: false
           i18n: false
           type: Boolean
-    # "inherited" (copied) from "mte/dialogs/pages/pageProperties.yaml"
-    - name: tabMeta
-      fields:
-        - name: keywords
-          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          i18n: true
-          rows: 3
-        - name: description
-          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          i18n: true
-          rows: 5
-    # travel-home-page (search) specific properties
-    - name: tabSearch
-      fields:
-        - name: searchResultPage
+        - name: logo
+          label: select image
           class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
-          i18n: false
-          required: false
-          targetWorkspace: website
-          appName: pages
+          targetWorkspace: dam
+          appName: assets
           identifierToPathConverter:
-            class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
 
-actions:
-  commit:
-    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
-  cancel:
-    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition
+actions: !include /one-pager-module/dialogs/common/default-dialog-actions.yaml
