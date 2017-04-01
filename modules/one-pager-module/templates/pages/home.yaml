@@ -15,6 +15,8 @@ areas:
     availableComponents:
       content-items-list:
         id: one-pager-module:components/content-items-list
+      imgLink:
+        id: one-pager-module:components/imgLink
       textImage:
         id: one-pager-module:components/textImage
       carousel:
