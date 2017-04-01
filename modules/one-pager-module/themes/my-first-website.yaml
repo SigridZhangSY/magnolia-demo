@@ -11,3 +11,5 @@ imaging:
     xxlarge:
       class: info.magnolia.templating.imaging.variation.SimpleResizeVariation
       width: 1140
+    default:
+      class: info.magnolia.templating.imaging.variation.SimpleResizeVariation

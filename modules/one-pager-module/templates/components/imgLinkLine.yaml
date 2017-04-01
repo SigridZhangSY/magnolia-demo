@@ -1,0 +1,3 @@
+templateScript: /one-pager-module/templates/components/imgLinkLine.ftl
+dialog: one-pager-module:components/imgLinkLine
+renderType: freemarker

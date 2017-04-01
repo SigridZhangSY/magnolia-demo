@@ -1,11 +1,8 @@
 [#-------------- ASSIGNMENTS --------------]
 [#include "/one-pager-module/templates/macros/image.ftl" /]
-[#--[#include "/one-pager-module/templates/macros/tourTypeIcon.ftl" /]--]
 
 [#assign products = content.products]
-[#--[#assign showTourTypes = content.showTourTypes!true]--]
 
-[#-------------- RENDERING --------------]
 
 <!-- Tour Carousel -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">

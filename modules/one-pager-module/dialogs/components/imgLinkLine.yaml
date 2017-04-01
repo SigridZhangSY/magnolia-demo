@@ -1,0 +1,32 @@
+form:
+  tabs:
+    - name: tabMain
+      label: imgLinks
+      fields:
+        - name: items
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          label: Features
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueSubChildrenNodePropertiesTransformer
+          field:
+            name: compositeField
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.NoOpCompositeTransformer
+            layout: vertical
+            fields:
+              - name: image
+                label: select image
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                targetWorkspace: dam
+                appName: assets
+                identifierToPathConverter:
+                  class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                contentPreviewDefinition:
+                  contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+              - name: target
+                label: target link
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                appName: pages
+                targetWorkspace: website
+
+
+actions: !include /one-pager-module/dialogs/common/default-dialog-actions.yaml
