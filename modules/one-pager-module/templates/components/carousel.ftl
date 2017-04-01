@@ -56,9 +56,9 @@
 
     <!-- Carousel Controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="icon icon-prev" aria-hidden="true"></span>
+        <span class="carousel-icon carousel-icon-prev" aria-hidden="true"></span>
     </a>
     <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="icon icon-next" aria-hidden="true"></span>
+        <span class="carousel-icon carousel-icon-next" aria-hidden="true"></span>
     </a>
 </div>

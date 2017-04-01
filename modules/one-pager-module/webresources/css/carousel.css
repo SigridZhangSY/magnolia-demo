@@ -6,25 +6,24 @@
 .carousel-caption {
     position: static;
     padding: 0;
-    height: 596px;
 }
 
 .carousel-caption img{
     width: 100%;
 }
 
-.icon {
+.carousel-icon {
     background-image: url(../images/sprite-icons.svg);
     background-repeat: no-repeat;
 }
 
-.icon-prev {
+.carousel-icon-prev {
     width: 35px;
     height: 67px;
     background-position: 0px -150px;
 }
 
-.icon-next {
+.carousel-icon-next {
     width: 35px;
     height: 67px;
     background-position: 0px -72px;
