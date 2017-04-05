@@ -21,8 +21,9 @@
 
 [@cms.area name="navigation"/]
 
-
 [@cms.area name="content-sections"/]
+
+[@cms.area name="footer-area"/]
 
 [#--jquery and bootstrap js--]
 <script src="${ctx.contextPath}/.resources/one-pager-module/webresources/bootstrap-3.3.5/jquery.js"></script>
