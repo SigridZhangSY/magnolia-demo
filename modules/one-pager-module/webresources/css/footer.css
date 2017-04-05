@@ -11,6 +11,10 @@ ul.footer li.footer-item p {
     font-weight: bold;
 }
 
+.footer-wrapper {
+    width: 70%;
+}
+
 .footer-item-wrapper {
     padding: 30px 45px;
 }
