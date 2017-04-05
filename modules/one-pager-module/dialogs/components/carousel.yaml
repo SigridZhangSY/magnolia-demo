@@ -2,26 +2,29 @@ form:
   tabs:
     - name: tabMain
       fields:
-        - name: products
+        - name: items
+          label: items
           class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
-          buttonSelectAddLabel: field.link.select.add
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueSubChildrenNodePropertiesTransformer
           field:
-            class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
-            targetWorkspace: dam
-            appName: assets
-            label: Select image
-            identifierToPathConverter:
-              class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
-            contentPreviewDefinition:
-              contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
-            fieldEditable: false
-            buttonSelectNewLabel: field.link.select.new
-            buttonSelectOtherLabel: field.link.select.another
-
-
-#        - name: showTourTypes
-#          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
-#          defaultValue: true
-#          type: Boolean
+            name: compositeField
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.NoOpCompositeTransformer
+            layout: vertical
+            fields:
+              - name: image
+                label: select image
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                targetWorkspace: dam
+                appName: assets
+                identifierToPathConverter:
+                  class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                contentPreviewDefinition:
+                  contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+              - name: target
+                label: target link
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                appName: pages
+                targetWorkspace: website
 
 actions: !include /one-pager-module/dialogs/common/default-dialog-actions.yaml

@@ -21,7 +21,7 @@ form:
           i18n: false
           type: Boolean
         - name: logo
-           label: select image
+           label: select logo
            class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
            targetWorkspace: dam
            appName: assets

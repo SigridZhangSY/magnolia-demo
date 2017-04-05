@@ -1,49 +1,28 @@
 [#-------------- ASSIGNMENTS --------------]
 [#include "/one-pager-module/templates/macros/image.ftl" /]
 
-[#assign products = content.products]
+[#assign path = content.@handle]
+[#assign items = cmsfn.children(cmsfn.contentByPath(content.@handle + "/items"))]
 
-
-<!-- Tour Carousel -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-    [#list products as product]
-        [#assign activeClass=""]
-        [#if product_index == 0 ]
-            [#assign activeClass="active"]
-        [/#if]
-        <li data-target="#myCarousel" data-slide-to="${product_index}" class="${activeClass}"></li>
-    [/#list]
-    </ol>
 
     <!-- Actual Carousel List -->
     <div class="carousel-inner" role="listbox">
-    [#list products as product]
+    [#list items as item]
         [#assign activeClass=""]
-        [#if product_index == 0 ]
+        [#if item_index == 0 ]
             [#assign activeClass="active"]
         [/#if]
 
-
-        [#assign rendition = damfn.getRendition(product, "xxlarge")!]
+        [#assign link = item.target]
+        [#assign pic = item.image]
+        [#assign rendition = damfn.getRendition(pic, "xxlarge")!]
+        [#assign targetNode = cmsfn.contentByPath(link)]
         <div class="item ${activeClass}">
             <div class="container">
-                <a class="carousel-link" ">
+                <a class="carousel-link" href="${cmsfn.link(targetNode)}">
                     <div class="carousel-caption">
                         <img src="${rendition.link}">
-
-                        [#--<h1>${product.name!}</h1>--]
-                        [#--[#if showTourTypes]--]
-                            [#--<div class="category-icons">--]
-                                [#--[#list tour.tourTypes as tourType]--]
-                                    [#--<div class="category-icon absolute-center-container">--]
-                                        [#--[@tourTypeIcon tourType.icon tourType.name "" /]--]
-                                    [#--</div>--]
-                                [#--[/#list]--]
-                            [#--</div>--]
-                        [#--[/#if]--]
                     </div>
                 </a>
             </div>
