@@ -1,0 +1,13 @@
+[#--<ul class="footer">--]
+[#--[#list cmsfn.children(content, "mgnl:component") as child ]--]
+[#--<li class="footer-item">--]
+    [#--[#if child.subtitle?has_content]--]
+        [#--<p> ${child.subtitle}</p>--]
+    [#--</li>--]
+    [#--[/#if]--]
+[#--[/#list]--]
+[#--</ul>--]
+
+[#list components as component]
+    [@cms.component content=component /]
+[/#list]

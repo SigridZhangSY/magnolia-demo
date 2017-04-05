@@ -23,9 +23,10 @@ areas:
         id: one-pager-module:components/textImage
       carousel:
         id: one-pager-module:components/carousel
-  footer-area:
-    editabel: true
+  footer:
+    templateScript: /one-pager-module/templates/pages/areas/footer.ftl
     renderType: freemarker
     availableComponents:
-      footer:
-        id: one-pager-module:components/footer
+      linkList:
+        id: mtk:components/linkList
+

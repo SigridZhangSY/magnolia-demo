@@ -1,0 +1,12 @@
+ul.footer{
+    list-style-type: none;
+    padding: 24px 0;
+}
+
+ul.footer li.footer-item p {
+    color: #363636;
+    font-size: 15px;
+    /*font-size: 0.9375rem;*/
+    display: block;
+    font-weight: bold;
+}
