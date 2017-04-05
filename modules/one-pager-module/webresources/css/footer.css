@@ -1,4 +1,4 @@
-ul.footer{
+ul{
     list-style-type: none;
     padding: 24px 0;
 }
@@ -9,4 +9,25 @@ ul.footer li.footer-item p {
     /*font-size: 0.9375rem;*/
     display: block;
     font-weight: bold;
+}
+
+.footer-item-wrapper {
+    padding: 30px 45px;
+}
+
+.footer-item-wrapper h4{
+    font-size: 15px;
+}
+
+.footer-item-wrapper ul{
+    padding:20px 0;
+}
+
+.footer-item-wrapper ul li{
+    padding-bottom: 10px;
+}
+
+.footer-item-wrapper ul li a {
+    color:black;
+    font-weight:200;
 }
