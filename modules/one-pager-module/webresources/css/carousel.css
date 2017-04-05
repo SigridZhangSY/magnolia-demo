@@ -12,11 +12,6 @@
     width: 100%;
 }
 
-.carousel-icon {
-    background-image: url(../images/sprite-icons.svg);
-    background-repeat: no-repeat;
-}
-
 .carousel-icon-prev {
     width: 35px;
     height: 67px;

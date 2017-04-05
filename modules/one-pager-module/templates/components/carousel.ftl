@@ -6,6 +6,17 @@
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+    [#list items as item]
+        [#assign activeClass=""]
+        [#if item_index == 0 ]
+            [#assign activeClass="active"]
+        [/#if]
+        <li data-target="#myCarousel" data-slide-to="${item_index}" class="${activeClass}"></li>
+    [/#list]
+    </ol>
+
     <!-- Actual Carousel List -->
     <div class="carousel-inner" role="listbox">
     [#list items as item]
@@ -37,4 +48,5 @@
     <a class="right carousel-control" href="#myCarousel" data-slide="next">
         <span class="carousel-icon carousel-icon-next" aria-hidden="true"></span>
     </a>
+
 </div>
