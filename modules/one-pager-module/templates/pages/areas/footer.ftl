@@ -1,5 +1,9 @@
 [#assign itemNum = components?size]
-[#assign width = 12/itemNum]
+
+[#if itemNum != 0]
+    [#assign width = 12/itemNum]
+[/#if]
+
 
 <div class="footer-wrapper">
     <div class="container-fluid">

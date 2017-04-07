@@ -5,7 +5,7 @@
 
 
 [#assign cols = items?size]
-[#assign width = 12/cols]
+[#assign width = (12/cols)?int]
 
 <div class="container-fluid">
 
